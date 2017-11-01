@@ -1,0 +1,20 @@
+<GridLayout rows="auto, auto, 50" class="form">
+
+    <StackLayout row="1">
+        <StackLayout class="input-field">
+            <Label text="Username" class="label"></Label>
+            <TextField class="input input-border" [(ngModel)]='username'></TextField>
+        </StackLayout>
+
+        <StackLayout class="input-field">
+            <Label text="Password" class="label"></Label>
+            <TextField class="input input-border" [(ngModel)]='password' secure="true"></TextField>
+        </StackLayout>
+
+        <StackLayout class="btn-login-wrapper">
+            <Button text="LOG IN" class="btn btn-primary"  (tap)="login()"></Button>
+        </StackLayout>
+    </StackLayout>
+
+    <ActivityIndicator row="2" [busy]="isLoading"></ActivityIndicator>
+</GridLayout>
