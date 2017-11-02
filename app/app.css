@@ -14,3 +14,5 @@ refer to http://docs.nativescript.org/ui/theme.
 @import '~nativescript-theme-core/scss/light';
 
 @import 'custom.css';
+
+.actionBar{ color:#fff; background-color: #ff5b57;}

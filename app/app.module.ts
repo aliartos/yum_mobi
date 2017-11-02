@@ -48,7 +48,7 @@ setStatusBar();
         ItemService,
         Configuration,
         AuthApi, AdminApi,
-        { provide: BASE_PATH, useValue: "http://yum.chania/api" },
+        { provide: BASE_PATH, useValue: "http://localhost:8080/api" }, //http://yum.chania/api
         AuthenticationService
     ],
     schemas: [

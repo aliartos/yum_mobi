@@ -1,6 +1,10 @@
-<GridLayout rows="auto, auto, 50" class="form">
+<GridLayout rows="auto, auto, 50" class="form"  style.backgroundImage="~/assets/img/Login-Bg.jpg">
 
-    <StackLayout row="1">
+    <StackLayout row="0" class="logo-container" horizontalAlignment="center" style.backgroundColor="white">
+        <Image src="res://icon" stretch="none"></Image>
+    </StackLayout>
+
+    <StackLayout row="1" style.backgroundColor="white" class="login-info">
         <StackLayout class="input-field">
             <Label text="Username" class="label"></Label>
             <TextField class="input input-border" [(ngModel)]='username'></TextField>
