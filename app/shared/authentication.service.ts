@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Headers, Response } from '@angular/http';
 import { LowerCasePipe } from '@angular/common';
 import { Observable, Subject, BehaviorSubject } from 'rxjs/Rx';
+import * as localStorage  from 'nativescript-localstorage';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';

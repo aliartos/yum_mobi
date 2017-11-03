@@ -7,17 +7,20 @@
     <StackLayout row="1" style.backgroundColor="white" class="login-info">
         <StackLayout class="input-field">
             <Label text="Username" class="label"></Label>
-            <TextField class="input input-border" [(ngModel)]='username'></TextField>
+            <TextField class="input input-border" [(ngModel)]='username'  (returnPress)="focusPassword()" autocorrect="false"
+            autocapitalizationType="none" [isEnabled]="!isLoading"></TextField>
         </StackLayout>
 
         <StackLayout class="input-field">
             <Label text="Password" class="label"></Label>
-            <TextField class="input input-border" [(ngModel)]='password' secure="true"></TextField>
+            <TextField class="input input-border" [(ngModel)]='password' secure="true" (returnPress)="login()" [isEnabled]="!isLoading"></TextField>
         </StackLayout>
 
         <StackLayout class="btn-login-wrapper">
             <Button text="LOG IN" class="btn btn-primary"  (tap)="login()"></Button>
         </StackLayout>
+
+        <TextField [(ngModel)]='response'></TextField>
     </StackLayout>
 
     <ActivityIndicator row="2" [busy]="isLoading"></ActivityIndicator>

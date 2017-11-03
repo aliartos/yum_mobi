@@ -221,7 +221,9 @@ export class AuthApi {
         if (extraHttpRequestParams) {
             requestOptions = (<any>Object).assign(requestOptions, extraHttpRequestParams);
         }
-
+        console.log("http req:");
+        console.log(path);
+        console.log(requestOptions);
         return this.http.request(path, requestOptions);
     }
 
