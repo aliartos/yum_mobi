@@ -22,7 +22,7 @@ import { BASE_PATH } from './remote/variables';
 import { Configuration } from './remote/configuration';
 
 import { AuthenticationService } from './shared/authentication.service';
-
+import { CalendarModule } from 'angular-calendar';
 
 
 // Uncomment and add to NgModule imports  if you need to use the HTTP wrapper
@@ -40,7 +40,8 @@ setStatusBar();
         NativeScriptFormsModule,
         NativeScriptHttpModule,
         AppRoutingModule,
-        SharedModule, AnonModule, HungryModule
+        SharedModule, AnonModule, HungryModule,
+        CalendarModule.forRoot()
     ],
     declarations: [
         AppComponent,
@@ -51,7 +52,7 @@ setStatusBar();
         LowerCasePipe,
         ItemService,
         Configuration,
-        AuthApi, AdminApi,
+        AuthApi, AdminApi, 
         { provide: BASE_PATH, useValue: "http://185.92.223.164:8080/api" }, //http://yum.chania/api
         AuthenticationService
     ],

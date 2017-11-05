@@ -1,11 +1,25 @@
-
-
-
 <ActionBar title="YUM" class="actionBar">
 </ActionBar>
 
 <StackLayout class="page">
 
-    <button title="test" text="test1" class="button"></button>
-    <label text="hello "></label>
-</StackLayout> 
+    <StackLayout class="animate" *ngIf="!showLoadSpinner">
+        <StackLayout *ngFor="let day of weekDays" [ngClass]="{'warningUser': controlledUser}">
+
+            <StackLayout class="date  is-flex" [ngClass]="{'cursor': getDailyMenuComment(day)}" matTooltip='{{getDailyMenuComment(day)}}'
+                [matTooltipPosition]="'after'">
+                <TextField text="{{formattedDay(day)}}"></TextField>
+            </StackLayout>
+
+
+            <TextField *ngIf='!dailyMenuExists(day)' text="Today there is no menu prepared! Some fasting will be good for you ;)"></TextField>
+<!-- 
+            <StackLayout *ngIf='dailyMenuExists(day)'>
+                <app-daily-menu (dailyMenuChanges)="handleUserUpdated($event, day)" [dailyMenu]='getDailyMenu(day)' [controlledUser]="controlledUser"></app-daily-menu>
+              </StackLayout> -->
+        </StackLayout>
+    </StackLayout>
+
+
+</StackLayout>
+ 
