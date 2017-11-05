@@ -52,7 +52,7 @@ setStatusBar();
         ItemService,
         Configuration,
         AuthApi, AdminApi,
-        { provide: BASE_PATH, useValue: "http://ip:8080/api" }, //http://yum.chania/api
+        { provide: BASE_PATH, useValue: "http://185.92.223.164:8080/api" }, //http://yum.chania/api
         AuthenticationService
     ],
     schemas: [
